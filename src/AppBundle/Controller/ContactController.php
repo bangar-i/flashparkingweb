@@ -4,18 +4,18 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class ContactController extends Controller
 {
     /**
-     * @Route("/default")
+     * @Route("/contact")
      */
-    public function indexAction(Request $request)
+    public function contactAction()
     {
-        return $this->render('@App/default/index.html.twig', array(
+        // replace this example code with whatever you need
+        return $this->render('@App/contact/contact.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-            'nav_active' => 'accueil',
+            'nav_active' => 'contact',
         ));
     }
 }
