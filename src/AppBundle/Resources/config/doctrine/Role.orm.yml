@@ -1,0 +1,29 @@
+AppBundle\Entity\Role:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\RoleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        libelle:
+            type: string
+            length: 255
+        description:
+            type: text
+            nullable: true
+    manyToMany:
+      droits:
+        targetEntity: Droit
+        joinTable:
+          name: role_droits
+          joinColumns:
+            role_id:
+              referencedColumnName: id
+          inverseJoinColumns:
+            droit_id:
+              referencedColumnName: id
+    lifecycleCallbacks: {  }
