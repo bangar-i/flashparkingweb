@@ -1,0 +1,31 @@
+AppBundle\Entity\Reservation:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ReservationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        heureDebutInit:
+            type: datetime
+        heureDebut:
+            type: datetime
+        heureFinInit:
+            type: datetime
+        heureFin:
+            type: datetime
+    manyToOne:
+        parking:
+          targetEntity: Parking
+          joinColumn:
+            name: parking_id
+            referencedColumnName: id
+        tarif:
+          targetEntity: Tarif
+          joinColumn:
+            name: tarif_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,28 @@
+AppBundle\Entity\Forfait:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ForfaitRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        libelle:
+            type: string
+            length: 255
+        description:
+            type: text
+    manyToOne:
+        tarif:
+          targetEntity: Tarif
+          joinColumn:
+            name: tarif_id
+            referencedColumnName: id
+        promotion:
+          targetEntity: Promotion
+          joinColumn:
+            name: promotion_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

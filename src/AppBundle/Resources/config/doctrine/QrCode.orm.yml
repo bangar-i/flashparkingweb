@@ -1,0 +1,16 @@
+AppBundle\Entity\QrCode:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\QrCodeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        image:
+            type: text
+        data:
+            type: text
+    lifecycleCallbacks: {  }

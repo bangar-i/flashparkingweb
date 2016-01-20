@@ -1,0 +1,69 @@
+AppBundle\Entity\User:
+    type: entity
+    table: user
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+            unique: true
+        login:
+            type: string
+            length: 255
+            unique: true
+        password:
+            type: text
+        adresse:
+            type: text
+        adresse2:
+            type: text
+            nullable: true
+        codePostal:
+            type: string
+            length: 255
+        ville:
+            type: string
+            length: 255
+        immatriculation:
+            type: string
+            length: '20'
+            unique: true
+        voiture:
+            type: string
+            length: 255
+        dateNaissance:
+            type: date
+        telephone:
+            type: integer
+        telephone2:
+            type: integer
+            nullable: true
+        photo:
+            type: text
+            nullable: true
+        charte:
+            type: integer
+    manyToOne:
+        role:
+          targetEntity: Role
+          joinColumn:
+            name: role_id
+            referencedColumnName: id
+        code:
+          targetEntity: QrCode
+          joinColumn:
+            name: code_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

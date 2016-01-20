@@ -1,0 +1,28 @@
+AppBundle\Entity\Requete:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\RequeteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        sujet:
+            type: string
+            length: 255
+        message:
+            type: text
+    manyToOne:
+        statut:
+          targetEntity: Statut
+          joinColumn:
+            name: statut_id
+            referencedColumnName: id
+        user:
+          targetEntity: User
+          joinColumn:
+            name: user_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }
