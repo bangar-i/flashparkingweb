@@ -17,9 +17,14 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<!-- CSS Custom -->
-    <!--<link rel="stylesheet" href="../../../../../web/bundles/css/style.css">-->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- Css animations  -->
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+
+    <!-- Theme stylesheet, if possible do not edit this stylesheet -->
+    <link href="{{ asset('css/style.default.css') }}" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- Custom stylesheet - for your changes -->
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
     <!-- Responsivity for older IE -->
     <!--[if lt IE 9]>
@@ -27,122 +32,150 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Favicon and apple touch icons-->
+    <link rel="shortcut icon" href="{{ asset('../images/favicon.ico') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('../images/apple-touch-icon.png') }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('../images/apple-touch-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('../images/apple-touch-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('../images/apple-touch-icon-76x76.png') }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('../images/apple-touch-icon-114x114.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('../images/apple-touch-icon-120x120.png') }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('../images/apple-touch-icon-144x144.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('../images/apple-touch-icon-152x152.png') }}" />
+    <!-- owl carousel css -->
+
+    <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.theme.css') }}" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
 
-< id="all">
+<div id="all">
 
     <header>
 
         <!-- *** TOP ***
+
+
         <!-- *** NAVBAR ***
 _________________________________________________________ -->
 
-       <div class="bar-admin"></div>
-        <!--<div class="navbar-admin">-->
-        <ul class="menu-horizontal">
-            <ul style="float:right;list-style-type:none;">
-                    <li class="login-bar"><a href="#login">Se connecter</a></li>
-                </ul>
-        </ul>
+        <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
 
-        <!--</div>
+            <div class="navbar navbar-default yamm" role="navigation" id="navbar">
 
-       <div class="nav-vertical">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header">
 
-        <ul class="menu-vertical">
-            <img src="{{ asset('images/logo-parking-2.jpg') }}" style="border: 8px solid #fff;" class="img-responsive logo" alt="#">
-            <li class="menu-ele"><a href="#home">Tableau de bord</a></li>
-            <li class="menu-ele"><a href="#news">Gestion des parkings</a></li>
-            <li class="menu-ele"><a href="#contact">Pages</a></li>
-            <li class="menu-ele"><a href="#about">Comptes utilisateurs</a></li>
-            <li class="menu-ele"><a href="#about">Réservations</a></li>
-            <li class="menu-ele">
-                <div class="dropdown"><a class="active" href="#about"><span class="glyphicon glyphicon-envelope"></span> Messages</a>
-                    <div class="dropdown-background">
-                        <div class="dropdown-content">
-                        <!-- <ul class="sous-menu-vertical">
-                            <a href="#">Recrutement</a>
-                            <a href="#">Plaintes</a>
-                            <a href="#">Contact</a>
-                      <!-- </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        </div>-->
-
-        <div class="area"></div><nav class="main-menu">
-            <ul>
-                <img src="{{ asset('images/logo-parking-2.jpg') }}" style="border: 8px solid #fff;" class="img-responsive logo" alt="#">
-                <li class="menu-ele">
-                    <a href="#">
-                        <i class="fa fa-home fa-2x"></i>
-                        <span class="nav-text">
-                            Tableau de bord
-                        </span>
-                    </a>
-
-                </li>
-                <li class="menu-ele">
-                    <a href="#">
-                        <i class="fa fa-automobile fa-2x"></i>
-                        <span class="nav-text">
-                            Gestion des parkings
-                        </span>
-                    </a>
-
-                </li>
-                <li class="menu-ele">
-                    <a href="#">
-                        <i class="fa fa-file-text-o fa-2x"></i>
-                        <span class="nav-text">
-                            Pages
-                        </span>
-                    </a>
-
-                </li>
-                <li class="menu-ele">
-                    <a href="#">
-                        <i class="fa fa-user fa-2x"></i>
-                        <span class="nav-text">
-                            Comptes utilisateurs
-                        </span>
-                    </a>
-                </li>
-                <li class="menu-ele">
-                    <a href="#">
-                        <i class="fa fa-calendar fa-2x"></i>
-                        <span class="nav-text">
-                            Réservations
-                        </span>
-                    </a>
-                </li>
-                <li class="menu-ele active">
-                    <div class="dropdown">
-                    <a class="active" href="#">
-                        <i class="fa fa-envelope fa-2x"></i>
-
-                        <span class="nav-text">
-                            Messages
-                        </span>
-                    </a>
-                        <div class="dropdown-background">
-                            <div class="dropdown-content">
-                                <a href="#">Recrutement</a>
-                                <a href="#">Plaintes</a>
-                                <a href="#">Contact</a>
+                            <a class="navbar-brand home" href="index.php">
+                                <img src="{{ ('../images/logo-parking-2.jpg') }}" alt="FlashParking logo" class="hidden-xs hidden-sm">
+                                <img src="{{ ('../images/logo-parking-2-small.jpg') }}" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
+                            </a>
+                            <div class="navbar-buttons">
+                                <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <i class="fa fa-align-justify"></i>
+                                </button>
                             </div>
                         </div>
+                        <!--/.navbar-header -->
+
+                        <div class="navbar-collapse collapse" id="navigation">
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li {% if nav_active == 'accueil' %} { class="dropdown active"} {% endif %}>
+                                    <a href="default">ACCUEIL</a>
+                                </li>
+                                <li {% if nav_active == 'societe' %} { class="dropdown active"} {% endif %}>
+                                    <a href="javascript: void(0)"  data-toggle="dropdown">SOCIETE <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="valeurs">Nos valeurs</a>
+                                        </li>
+                                        <li><a href="mentions-legales">Mentions légales</a>
+                                        </li>
+                                        <li><a href="systeme">Notre système</a>
+                                        </li>
+                                        <li><a href="charte">Charte de bonne conduite</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li {% if nav_active == 'offres' %} { class="dropdown active"} {% endif %}>
+                                    <a href="offres" >NOS OFFRES</a>
+
+                                </li>
+
+                                <li {% if nav_active == 'reservations' %} { class="dropdown active"} {% endif %}>
+                                    <a href="reservations">RESERVATIONS </a>
+
+                                </li>
+
+
+                                <li {% if nav_active == 'contact' %} { class="dropdown active"} {% endif %}>
+                                    <a href="contact">Contact</a>
+
+                                </li>
+
+                                <li style="background-color: #E5A52B;" {% if nav_active == 'connexion' %} { class="dropdown active"} {% endif %}>
+                                    <a href="customer-register" style="color:#fff;"><i class="fa fa-user"></i> <span class="hidden-xs">Connexion</span></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--/.nav-collapse -->
+
+
+                        <!--/.nav-collapse -->
                     </div>
-                                       </li>
-                                   </ul>
-                               </nav>
-                               <!-- *** NAVBAR END *** -->
+                </div>
+
+
+            </div>
+            <!-- /#navbar -->
+
+        </div>
+
+        <!-- *** NAVBAR END *** -->
 
     </header>
+
+    <!-- *** LOGIN MODAL ***
+_________________________________________________________ -->
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="Login">Customer login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="customer-orders.html" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email_modal" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password_modal" placeholder="password">
+                        </div>
+
+                        <p class="text-center">
+                            <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
+                        </p>
+
+                    </form>
+
+                    <p class="text-center text-muted">Not registered yet?</p>
+                    <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *** LOGIN MODAL END *** -->
 
     {% block body %}
 
@@ -150,12 +183,111 @@ _________________________________________________________ -->
     <!-- *** FOOTER ***
 _________________________________________________________ -->
 
+    <footer id="footer">
+        <div class="container">
+            <div class="col-md-4 col-sm-6">
+                <h4>A Propos</h4>
+
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                <hr>
+
+                <h4>Newsletter</h4>
+
+                <form>
+                    <div class="input-group">
+
+                        <input type="text" class="form-control">
+
+                            <span class="input-group-btn">
+
+                        <button class="btn btn-default" type="button"><i class="fa fa-send"></i></button>
+
+                    </span>
+
+                    </div>
+                    <!-- /input-group -->
+                </form>
+
+                <hr class="hidden-md hidden-lg hidden-sm">
+
+            </div>
+            <!-- /.col-md-3 -->
+
+            <div class="col-md-2 col-sm-5">
+
+                <h4>Liens utiles</h4>
+                <li><a href="index.php">Accueil</a></li>
+                <li>Société</li>
+                <li><a href="offres.php">Nos offres</a></li>
+                <li>Réservation</li>
+                <li><a href="contact.php">Contact</a></li>
+                <hr class="hidden-md hidden-lg">
+
+            </div>
+            <!-- /.col-md-3 -->
+
+            <div class="col-md-3 col-sm-6">
+
+                <h4>Contact</h4>
+
+                <p><strong>FlashParking</strong>
+                    <br>48 Rue Camille Desmoulins
+                    <br>92130 Issy-les-Moulineaux
+                    <br>
+                    <strong>France</strong>
+                </p>
+
+                <a href="contact.php" class="btn btn-small btn-template-main">NOUS CONTACTER</a>
+
+                <hr class="hidden-md hidden-lg hidden-sm">
+
+            </div>
+            <!-- /.col-md-3 -->
+
+
+
+            <div class="col-md-3 col-sm-6">
+
+                <h4>Flashparking</h4>
+
+
+                <div>
+                    <a href="#">
+                        <img src="{{ ('../images/fotolia_94125483.jpg') }}" style="border: 8px solid #fff;" class="img-responsive" alt="#">
+                    </a>
+                </div>
+
+
+            </div>
+            <!-- /.col-md-3 -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /#footer -->
+
     <!-- *** FOOTER END *** -->
 
     <!-- *** COPYRIGHT ***
 _________________________________________________________ -->
 
+    <div id="copyright">
+        <div class="container">
+            <div class="col-md-12">
+                <p class="pull-left">&copy; 2015. Devinfinity</p>
+                <p class="pull-right">Crédit site </a>
+                </p>
 
+            </div>
+        </div>
+    </div>
+    <!-- /#copyright -->
+
+    <!-- *** COPYRIGHT END *** -->
+
+
+
+</div>
 <!-- /#all -->
 
 <!-- #### JAVASCRIPT FILES ### -->
