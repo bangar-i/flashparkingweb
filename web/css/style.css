@@ -4,6 +4,27 @@ body {
     z-index: -1;
 }
 
+h2 {
+    text-align: center;
+    color: rgb(220, 136, 10);
+}
+
+p {
+    text-align: center;
+    padding-bottom: 100px;
+    border-bottom:1px dashed black;
+
+}
+
+#pie_chart {
+    float: right;
+    border-style: solid;
+}
+
+#chart_div {
+    float: left;
+    border-style: solid;
+}
 
 .bar-admin {
     padding: 0px;
