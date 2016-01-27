@@ -290,3 +290,26 @@ nav ul,nav li {
 .sous-menu-vertical {
     list-style-type: none;
 }
+
+hr {
+    border-bottom: 1px solid black;
+    width: 50%;
+}
+
+.messages-non-lu {
+    padding-bottom: 10px;
+}
+
+.search-input {
+    padding-top: 10px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.button-search {
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 5px 5px;
+    text-align: center;
+}
