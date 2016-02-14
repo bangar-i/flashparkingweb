@@ -258,7 +258,7 @@ nav ul,nav li {
 {
     padding-top: 1px;
     left:10px;
-    BACKGROUND-COLOR: WHITE;
+    BACKGROUND-COLOR: rgb(25,129,154);
 }
 .dropdown-content {
     display: none;
@@ -312,4 +312,24 @@ hr {
     border: none;
     padding: 5px 5px;
     text-align: center;
+}
+
+.search-div {
+    background-color: rgb(243,243,243);
+    padding : 20px;
+    text-align: right;
+}
+
+.fa-search {
+    display: inline-block;
+}
+
+.img-parking{
+max-width: 25%;
+}
+
+.btn-gestion{
+text-align: right;
+background-color: rgb(25,129,154);
+    border: none;
 }
