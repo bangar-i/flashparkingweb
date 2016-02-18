@@ -64,10 +64,17 @@ p {
 .main-menu:hover,nav.main-menu.expanded {
     width:250px;
     overflow:visible;
+    background: url(../images/logo-parking-2.jpg) no-repeat;
+    background-size: 200px;
+    background-position: top;
+    background-color: white;
 }
 
 .main-menu {
-    background:white;
+    background: url(../images/smallLogoParking.png) no-repeat;
+    background-color: white;
+    background-position: top center;
+    background-size: 50px 50px;
     border-right:1px solid #e5e5e5;
     position:absolute;
     top:0;
@@ -83,7 +90,8 @@ p {
 }
 
 .main-menu>ul {
-    margin:7px 0;
+    margin:63px 0;
+
 }
 
 .main-menu li {

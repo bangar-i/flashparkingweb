@@ -14,14 +14,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ManageSearchController extends Controller
 {
     /**
-     * @Route("/manage/search")
+     * @Route("/backend/search")
      */
     public function ManageSearchAction()
     {
         // replace this example code with whatever you need
-        return $this->render('@App/backend/manage/search.html.twig', array(
+        return $this->render('@App/backend/search.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-            'nav_active' => 'contact',
+            'nav_active' => 'search',
         ));
     }
 }
