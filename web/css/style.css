@@ -266,7 +266,7 @@ nav ul,nav li {
 {
     padding-top: 1px;
     left:10px;
-    BACKGROUND-COLOR: rgb(25,129,154);
+    BACKGROUND-COLOR: white;
 }
 .dropdown-content {
     display: none;

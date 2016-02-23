@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class MessageController extends Controller
 {
     /**
-     * @Route("/backend/plaintes")
+     * @Route("backend/plaintes")
      */
     public function messageAction()
     {
