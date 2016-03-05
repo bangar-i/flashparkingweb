@@ -1,0 +1,32 @@
+AppBundle\Entity\Promotion:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PromotionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        libelle:
+            type: string
+            length: 255
+        description:
+            type: text
+        debut:
+            type: datetime
+        fin:
+            type: datetime
+    manyToOne:
+        tarif:
+          targetEntity: Tarif
+          joinColumn:
+            name: tarif_id
+            referencedColumnName: id
+        partenaire:
+          targetEntity: Partenaire
+          joinColumn:
+            name: partenaire_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,27 @@
+AppBundle\Entity\Facturation:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\FacturationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date:
+            type: datetime
+        total:
+            type: float
+    manyToOne:
+        user:
+          targetEntity: User
+          joinColumn:
+            name: user_id
+            referencedColumnName: id
+        paiement:
+          targetEntity: Paiement
+          joinColumn:
+            name: paiement_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

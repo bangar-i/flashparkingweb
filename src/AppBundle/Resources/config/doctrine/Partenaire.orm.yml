@@ -1,0 +1,23 @@
+AppBundle\Entity\Partenaire:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PartenaireRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        description:
+            type: text
+    manyToOne:
+        service:
+          targetEntity: Service
+          joinColumn:
+            name: service_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

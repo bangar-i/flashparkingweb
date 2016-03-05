@@ -1,0 +1,27 @@
+AppBundle\Entity\Commentaire:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CommentaireRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date:
+            type: date
+        evaluation:
+            type: integer
+    manyToOne:
+        parking:
+          targetEntity: Parking
+          joinColumn:
+            name: parking_id
+            referencedColumnName: id
+        user:
+          targetEntity: User
+          joinColumn:
+            name: user_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

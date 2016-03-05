@@ -1,0 +1,25 @@
+AppBundle\Entity\LigneFacturation:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\LigneFacturationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        quantite:
+            type: integer
+    manyToOne:
+        tarif:
+          targetEntity: Tarif
+          joinColumn:
+            name: tarif_id
+            referencedColumnName: id
+        facturation:
+          targetEntity: Facturation
+          joinColumn:
+            name: facturation_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

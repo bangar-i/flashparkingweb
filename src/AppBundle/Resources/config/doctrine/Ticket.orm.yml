@@ -1,0 +1,27 @@
+AppBundle\Entity\Ticket:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\TicketRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+      partenaire:
+        targetEntity: Partenaire
+        joinColumn:
+          name: partenaire_id
+          referencedColumnName: id
+      code:
+        targetEntity: QrCode
+        joinColumn:
+          name: code_id
+          referencedColumnName: id
+      reservation:
+        targetEntity: Reservation
+        joinColumn:
+          name: reservation_id
+          referencedColumnName: id
+    lifecycleCallbacks: {  }

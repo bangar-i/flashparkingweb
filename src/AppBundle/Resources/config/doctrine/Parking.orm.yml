@@ -1,0 +1,34 @@
+AppBundle\Entity\Parking:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ParkingRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        place:
+            type: string
+            length: 255
+        placeLibre:
+            type: integer
+        placePrise:
+            type: integer
+        description:
+            type: text
+        adresse:
+            type: text
+        codePostal:
+            type: string
+            length: 255
+        ville:
+            type: string
+            length: 255
+        coordonnees:
+            type: text
+    lifecycleCallbacks: {  }

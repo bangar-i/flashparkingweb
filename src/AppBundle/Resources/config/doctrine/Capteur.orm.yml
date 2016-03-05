@@ -1,0 +1,20 @@
+AppBundle\Entity\Capteur:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CapteurRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        etat:
+            type: smallint
+    manyToOne:
+        parking:
+          targetEntity: Parking
+          joinColumn:
+            name: parking_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }
